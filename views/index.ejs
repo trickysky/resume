@@ -6,10 +6,10 @@
     <meta name="author" content="trickysky">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>田琨的个人简介</title>
-    <link href="/lib/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href="/lib/bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/main.css" rel="stylesheet">
-    <link href="/images/tiankun.jpg" rel="shortcut icon" type="image/x-icon" />
+    <link href="lib/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="lib/bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="main.css" rel="stylesheet">
+    <link href="images/tiankun.jpg" rel="shortcut icon" type="image/x-icon" />
 </head>
 
 <body data-spy="scroll" data-target="#navbar-example">
@@ -42,11 +42,33 @@
                 <li><a href="#abilities">个人能力</a></li>
                 <li><a href="#honor">荣誉奖项</a></li>
                 <li><a href="#contact">联系方式</a></li>
+                <li><a data-toggle="modal" data-target="#pdf-modal">简历</a></li>
             </ul>
         </div>
         <!-- /.navbar-collapse -->
     </nav>
     <div class="background-white">
+
+        <div id="pdf-modal" class="modal fade">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+                                    class="sr-only">Close</span></button>
+                        <h4 class="modal-title">简历预览</h4>
+                    </div>
+                    <div id="my-pdf" class="modal-body"></div>
+                    <div class="modal-footer">
+                        <!--<form method="get" action="/doc/resume.pdf">-->
+                            <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                            <button type="button" class="btn btn-info" onclick="window.open('/doc/resume.pdf')">全屏显示</button>
+                            <button type="button" class="btn btn-primary"><a href="/doc/resume.pdf" download="田琨的简历">下载</a></button>
+                        <!--</form>-->
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+
         <div id="profile" class="container">
             <h2>个人简介</h2>
             <hr>
@@ -1062,10 +1084,12 @@
             </div>
         </div>
     </div>
-    <script type="text/javascript" src="/signature.js"></script>
-    <script type="text/javascript" src="/lib/jquery.min.js"></script>
-    <script type="text/javascript" src="/page_js.js"></script>
-    <script type="text/javascript" src="/lib/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="signature.js"></script>
+    <script type="text/javascript" src="lib/jquery.min.js"></script>
+    <script type="text/javascript" src="page_js.js"></script>
+    <script type="text/javascript" src="lib/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+    <script src="lib/PDFObject/pdfobject.min.js"></script>
+    <script>PDFObject.embed("/doc/resume.pdf", "#my-pdf");</script>
 </body>
 
 </html>

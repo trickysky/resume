@@ -97,21 +97,13 @@ hr {
 }
 
 .jumbotron {
-    background: no-repeat center right fixed url(images/background.jpg);
-    -webkit-background-size: 100%;
-    -moz-background-size: 100%;
-    -o-background-size: 100%;
-    background-size: 100%;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    background: rgb(207, 207, 207) url(images/background.jpg) no-repeat fixed center right;
+    background-size: 100% !important;
     -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/background.jpg', sizingMethod='scale')";
-    filter: progid: DXImageTransform.Microsoft.AlphaImageLoader(src='/images/background.jpg', sizingMethod='scale');
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/background.jpg', sizingMethod='scale');
     margin-bottom: 0px;
     padding: 0px;
 }
-
 
 /*.jumbotron:before {
     border: 1px solid #FFFFFF;
@@ -368,7 +360,6 @@ hr {
     -o-transform: rotate(12deg);
 }
 
-
 /* #reward .row { margin: 0px; } // bootstrap 3.1- hack */
 
 #reward .row > div {
@@ -489,21 +480,26 @@ hr {
         right: 20px;
         top: 20px;
     }
+
     .jumbotron .container {
         top: 20%;
         padding-top: 0px;
     }
+
     .jumbotron .scroll-down {
         width: 100%;
         right: 0px;
     }
+
     .navbar {
         left: 0px;
         width: 100%;
     }
+
     .navbar .nav > li {
         height: 60px;
     }
+
     .navbar .nav > li a {
         height: 60px;
         text-align: center;
@@ -511,46 +507,59 @@ hr {
         font-weight: 600;
         color: #FFFFFF;
     }
+
     .fixed .navbar {
         top: 0px;
     }
+
     .container {
         padding: 60px 20px;
         min-width: 280px;
     }
+
     .hidden-phone {
         display: none;
     }
+
     #profile .row * {
         text-align: center;
     }
+
     #experiences .experience .experience-details > span {
         display: block;
         margin-bottom: 6px;
     }
+
     #experiences .experience .experience-details .seperator {
         display: none;
     }
+
     #interests .left {
         float: none;
     }
+
     #interests .right {
         float: none;
     }
+
     #interests > * {
         text-align: center;
     }
+
     #interests img {
         width: 50%;
         height: auto;
         float: none !important;
     }
+
     #interests .interest-content {
         padding: 20px 0px;
     }
+
     #contact {
         padding-bottom: 60px;
     }
+
     #contact a .icon {
         float: left;
         margin-right: 10px;
@@ -569,6 +578,7 @@ hr {
         -webkit-background-size: 150% auto;
         background-attachment: scroll;
     }
+
     .jumbotron .lead {
         display: none;
     }
@@ -586,12 +596,9 @@ hr {
     }
 }
 
-
 /*---------------*/
 
-
 /***** EFFECT *****/
-
 
 /*---------------*/
 
@@ -714,9 +721,11 @@ figure.effect:hover p {
     font-size: large;
 }
 
-#honor .honor-time {}
+#honor .honor-time {
+}
 
-#honor .honor-name {}
+#honor .honor-name {
+}
 
 #honor .honor-level {
     color: #22A39F;
@@ -727,8 +736,6 @@ figure.effect:hover p {
     width: 30px;
     text-align: center;
 }
-
-
 
 .text-left-not-xs,
 .text-left-not-sm,
@@ -765,15 +772,19 @@ figure.effect:hover p {
     .text-justify-not-xs {
         text-align: inherit;
     }
+
     .text-left-xs {
         text-align: left;
     }
+
     .text-center-xs {
         text-align: center;
     }
+
     .text-right-xs {
         text-align: right;
     }
+
     .text-justify-xs {
         text-align: justify;
     }
@@ -786,15 +797,19 @@ figure.effect:hover p {
     .text-justify-not-sm {
         text-align: inherit;
     }
+
     .text-left-sm {
         text-align: left;
     }
+
     .text-center-sm {
         text-align: center;
     }
+
     .text-right-sm {
         text-align: right;
     }
+
     .text-justify-sm {
         text-align: justify;
     }
@@ -807,15 +822,19 @@ figure.effect:hover p {
     .text-justify-not-md {
         text-align: inherit;
     }
+
     .text-left-md {
         text-align: left;
     }
+
     .text-center-md {
         text-align: center;
     }
+
     .text-right-md {
         text-align: right;
     }
+
     .text-justify-md {
         text-align: justify;
     }
@@ -828,16 +847,38 @@ figure.effect:hover p {
     .text-justify-not-lg {
         text-align: inherit;
     }
+
     .text-left-lg {
         text-align: left;
     }
+
     .text-center-lg {
         text-align: center;
     }
+
     .text-right-lg {
         text-align: right;
     }
+
     .text-justify-lg {
         text-align: justify;
     }
+}
+
+#pdf-modal .modal-lg {
+    width: 95%;
+}
+
+#pdf-modal .modal-body {
+    padding: 5px;
+}
+
+#pdf-modal .pdfobject {
+    min-height: 500px;
+    height: auto;
+}
+
+#pdf-modal .btn-primary a {
+    color: inherit;
+    text-decoration: inherit;
 }
